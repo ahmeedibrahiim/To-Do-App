@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.scss" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>TODO</h1>
+        <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+      </header>
+
+      <div class="todo-container">
+        <input
+          type="text"
+          class="todo-input"
+          placeholder="Create a new todo..."
+          id="newTodo"
+        />
+        <ul class="todo-list" id="todoList"></ul>
+        <div class="todo-footer">
+          <span id="itemsLeft">0 items left</span>
+          <div class="todo-filters">
+            <button id="allFilter">All</button>
+            <button id="activeFilter">Active</button>
+            <button id="completedFilter">Completed</button>
+          </div>
+          <button id="clearCompleted">Clear Completed</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

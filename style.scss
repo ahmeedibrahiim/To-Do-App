@@ -1,0 +1,123 @@
+:root {
+  --background-dark: #161722;
+  --background-light: #f9f9f9;
+  --text-dark: #cacde8;
+  --text-light: #494c6b;
+  --primary-color: #3a7bfd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  color: var(--text-dark);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.todo-container {
+  background-color: var(--background-dark);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.todo-input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--background-light);
+  border-radius: 5px;
+  color: var(--text-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.todo-filters button {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.todo-filters button.active {
+  color: var(--primary-color);
+}
+
+#clearCompleted {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+body.light-theme {
+  --background-dark: #f9f9f9;
+  --background-light: #fff;
+  --text-dark: #494c6b;
+  --text-light: #cacde8;
+  --primary-color: #3a7bfd;
+}
+
+body.light-theme .todo-container {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
